@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>WorldWideImporters_Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{88124ace-19ee-4402-9ab1-295cf0101c5e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>WorldWideImporters_Database</RootNamespace>
+    <AssemblyName>WorldWideImporters_Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <DefaultCollation>Latin1_General_100_CI_AS</DefaultCollation>
+    <DefaultFilegroup>USERDATA</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables\" />
+    <Folder Include="Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Stored Procedures\" />
+    <Folder Include="User Defined Types\" />
+    <Folder Include="Sequences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Warehouse.Colors.sql" />
+    <Build Include="Tables\Warehouse.Colors_Archive.sql" />
+    <Build Include="Tables\Sales.OrderLines.sql" />
+    <Build Include="Tables\Warehouse.PackageTypes.sql" />
+    <Build Include="Tables\Warehouse.PackageTypes_Archive.sql" />
+    <Build Include="Tables\Warehouse.StockGroups.sql" />
+    <Build Include="Tables\Warehouse.StockItemStockGroups.sql" />
+    <Build Include="Tables\Warehouse.StockGroups_Archive.sql" />
+    <Build Include="Tables\Application.StateProvinces.sql" />
+    <Build Include="Tables\Sales.CustomerTransactions.sql" />
+    <Build Include="Tables\Application.StateProvinces_Archive.sql" />
+    <Build Include="Tables\Application.Cities.sql" />
+    <Build Include="Tables\Application.Cities_Archive.sql" />
+    <Build Include="Tables\Application.SystemParameters.sql" />
+    <Build Include="Tables\Sales.InvoiceLines.sql" />
+    <Build Include="Tables\Purchasing.Suppliers.sql" />
+    <Build Include="Tables\Warehouse.StockItemTransactions.sql" />
+    <Build Include="Tables\Purchasing.Suppliers_Archive.sql" />
+    <Build Include="Tables\Sales.Customers.sql" />
+    <Build Include="Tables\Sales.Customers_Archive.sql" />
+    <Build Include="Tables\Purchasing.PurchaseOrders.sql" />
+    <Build Include="Tables\Sales.Orders.sql" />
+    <Build Include="Tables\Warehouse.ColdRoomTemperatures.sql" />
+    <Build Include="Tables\Warehouse.VehicleTemperatures.sql" />
+    <Build Include="Tables\Application.People.sql" />
+    <Build Include="Tables\Warehouse.StockItems.sql" />
+    <Build Include="Tables\Application.People_Archive.sql" />
+    <Build Include="Tables\Warehouse.ColdRoomTemperatures_Archive.sql" />
+    <Build Include="Tables\Warehouse.StockItems_Archive.sql" />
+    <Build Include="Tables\Application.Countries.sql" />
+    <Build Include="Tables\Warehouse.StockItemHoldings.sql" />
+    <Build Include="Tables\Purchasing.PurchaseOrderLines.sql" />
+    <Build Include="Tables\Application.Countries_Archive.sql" />
+    <Build Include="Tables\Application.DeliveryMethods.sql" />
+    <Build Include="Tables\Application.DeliveryMethods_Archive.sql" />
+    <Build Include="Tables\Application.PaymentMethods.sql" />
+    <Build Include="Tables\Purchasing.SupplierTransactions.sql" />
+    <Build Include="Tables\Application.PaymentMethods_Archive.sql" />
+    <Build Include="Tables\Application.TransactionTypes.sql" />
+    <Build Include="Tables\Sales.SpecialDeals.sql" />
+    <Build Include="Tables\Application.TransactionTypes_Archive.sql" />
+    <Build Include="Tables\Purchasing.SupplierCategories.sql" />
+    <Build Include="Tables\Purchasing.SupplierCategories_Archive.sql" />
+    <Build Include="Tables\Sales.BuyingGroups.sql" />
+    <Build Include="Tables\Sales.Invoices.sql" />
+    <Build Include="Tables\Sales.BuyingGroups_Archive.sql" />
+    <Build Include="Tables\Sales.CustomerCategories.sql" />
+    <Build Include="Tables\Sales.CustomerCategories_Archive.sql" />
+    <Build Include="Views\Website.Suppliers.sql" />
+    <Build Include="Views\Website.Customers.sql" />
+    <Build Include="Views\Website.VehicleTemperatures.sql" />
+    <Build Include="Storage\USERDATA.sql" />
+    <Build Include="Storage\WWI_InMemory_Data.sql" />
+    <Build Include="Security\External Sales.sql" />
+    <Build Include="Security\Far West Sales.sql" />
+    <Build Include="Security\Great Lakes Sales.sql" />
+    <Build Include="Security\Mideast Sales.sql" />
+    <Build Include="Security\New England Sales.sql" />
+    <Build Include="Security\Plains Sales.sql" />
+    <Build Include="Security\Rocky Mountain Sales.sql" />
+    <Build Include="Security\Southeast Sales.sql" />
+    <Build Include="Security\Southwest Sales.sql" />
+    <Build Include="Functions\Website.CalculateCustomerPrice.sql" />
+    <Build Include="Functions\Application.DetermineCustomerAccess.sql" />
+    <Build Include="Stored Procedures\Sequences.ReseedSequenceBeyondTableValues.sql" />
+    <Build Include="Stored Procedures\Sequences.ReseedAllSequences.sql" />
+    <Build Include="Stored Procedures\DataLoadSimulation.DeactivateTemporalTablesBeforeDataLoad.sql" />
+    <Build Include="Stored Procedures\DataLoadSimulation.ReactivateTemporalTablesAfterDataLoad.sql" />
+    <Build Include="Stored Procedures\Application.CreateRoleIfNonexistent.sql" />
+    <Build Include="Stored Procedures\Application.AddRoleMemberIfNonexistent.sql" />
+    <Build Include="Stored Procedures\Website.SearchForPeople.sql" />
+    <Build Include="Stored Procedures\Website.SearchForSuppliers.sql" />
+    <Build Include="Stored Procedures\Website.SearchForCustomers.sql" />
+    <Build Include="Stored Procedures\Website.SearchForStockItems.sql" />
+    <Build Include="Stored Procedures\Website.SearchForStockItemsByTags.sql" />
+    <Build Include="Stored Procedures\Website.RecordVehicleTemperature.sql" />
+    <Build Include="Stored Procedures\DataLoadSimulation.Configuration_ApplyDataLoadSimulationProcedures.sql" />
+    <Build Include="Stored Procedures\DataLoadSimulation.Configuration_RemoveDataLoadSimulationProcedures.sql" />
+    <Build Include="Stored Procedures\Website.InvoiceCustomerOrders.sql" />
+    <Build Include="Stored Procedures\Website.RecordColdRoomTemperatures.sql" />
+    <Build Include="Stored Procedures\Website.InsertCustomerOrders.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ApplyRowLevelSecurity.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ApplyAuditing.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_RemoveAuditing.sql" />
+    <Build Include="Stored Procedures\DataLoadSimulation.PopulateDataToCurrentDate.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ApplyColumnstoreIndexing.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_EnableInMemory.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ApplyFullTextIndexing.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ApplyPartitioning.sql" />
+    <Build Include="Stored Procedures\Website.ActivateWebsiteLogon.sql" />
+    <Build Include="Stored Procedures\Website.ChangePassword.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_RemoveRowLevelSecurity.sql" />
+    <Build Include="Stored Procedures\Application.Configuration_ConfigureForEnterpriseEdition.sql" />
+    <Build Include="Stored Procedures\Integration.GetCityUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetCustomerUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetEmployeeUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetPaymentMethodUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetStockItemUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetSupplierUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetTransactionTypeUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetMovementUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetOrderUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetPurchaseUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetSaleUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetStockHoldingUpdates.sql" />
+    <Build Include="Stored Procedures\Integration.GetTransactionUpdates.sql" />
+    <Build Include="User Defined Types\Website.OrderIDList.sql" />
+    <Build Include="User Defined Types\Website.OrderList.sql" />
+    <Build Include="User Defined Types\Website.OrderLineList.sql" />
+    <Build Include="User Defined Types\Website.SensorDataList.sql" />
+    <Build Include="Storage\PF_TransactionDateTime.sql" />
+    <Build Include="Storage\PF_TransactionDate.sql" />
+    <Build Include="Storage\PS_TransactionDateTime.sql" />
+    <Build Include="Storage\PS_TransactionDate.sql" />
+    <Build Include="Security\Application.sql" />
+    <Build Include="Security\DataLoadSimulation.sql" />
+    <Build Include="Security\Integration.sql" />
+    <Build Include="Security\PowerBI.sql" />
+    <Build Include="Security\Purchasing.sql" />
+    <Build Include="Security\Reports.sql" />
+    <Build Include="Security\Sales.sql" />
+    <Build Include="Security\Sequences.sql" />
+    <Build Include="Security\Warehouse.sql" />
+    <Build Include="Security\Website.sql" />
+    <Build Include="Sequences\Sequences.BuyingGroupID.sql" />
+    <Build Include="Sequences\Sequences.CityID.sql" />
+    <Build Include="Sequences\Sequences.ColorID.sql" />
+    <Build Include="Sequences\Sequences.CountryID.sql" />
+    <Build Include="Sequences\Sequences.CustomerCategoryID.sql" />
+    <Build Include="Sequences\Sequences.CustomerID.sql" />
+    <Build Include="Sequences\Sequences.DeliveryMethodID.sql" />
+    <Build Include="Sequences\Sequences.InvoiceID.sql" />
+    <Build Include="Sequences\Sequences.InvoiceLineID.sql" />
+    <Build Include="Sequences\Sequences.OrderID.sql" />
+    <Build Include="Sequences\Sequences.OrderLineID.sql" />
+    <Build Include="Sequences\Sequences.PackageTypeID.sql" />
+    <Build Include="Sequences\Sequences.PaymentMethodID.sql" />
+    <Build Include="Sequences\Sequences.PersonID.sql" />
+    <Build Include="Sequences\Sequences.PurchaseOrderID.sql" />
+    <Build Include="Sequences\Sequences.PurchaseOrderLineID.sql" />
+    <Build Include="Sequences\Sequences.SpecialDealID.sql" />
+    <Build Include="Sequences\Sequences.StateProvinceID.sql" />
+    <Build Include="Sequences\Sequences.StockGroupID.sql" />
+    <Build Include="Sequences\Sequences.StockItemID.sql" />
+    <Build Include="Sequences\Sequences.StockItemStockGroupID.sql" />
+    <Build Include="Sequences\Sequences.SupplierCategoryID.sql" />
+    <Build Include="Sequences\Sequences.SupplierID.sql" />
+    <Build Include="Sequences\Sequences.SystemParameterID.sql" />
+    <Build Include="Sequences\Sequences.TransactionID.sql" />
+    <Build Include="Sequences\Sequences.TransactionTypeID.sql" />
+    <Build Include="Security\Application.FilterCustomersBySalesTerritoryRole.sql" />
+  </ItemGroup>
+</Project>
