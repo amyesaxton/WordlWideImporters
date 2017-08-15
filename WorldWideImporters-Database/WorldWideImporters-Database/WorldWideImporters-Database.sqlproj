@@ -69,6 +69,7 @@
     <Folder Include="User Defined Types\" />
     <Folder Include="Sequences\" />
     <Folder Include="dbbackup" />
+    <Folder Include="prune-test" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Warehouse.Colors.sql" />
