@@ -68,7 +68,6 @@
     <Folder Include="Stored Procedures\" />
     <Folder Include="User Defined Types\" />
     <Folder Include="Sequences\" />
-    <Folder Include="dbbackup" />
     <Folder Include="prune-test" />
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +226,6 @@
     <Build Include="Views\dbo.View2.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dbbackup\txt.bak" />
     <None Include="WorldWideImporters-Database.publish.xml" />
   </ItemGroup>
 </Project>
