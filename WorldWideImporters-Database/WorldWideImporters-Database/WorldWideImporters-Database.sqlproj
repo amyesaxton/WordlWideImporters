@@ -221,5 +221,6 @@
     <Build Include="Sequences\Sequences.TransactionID.sql" />
     <Build Include="Sequences\Sequences.TransactionTypeID.sql" />
     <Build Include="Security\Application.FilterCustomersBySalesTerritoryRole.sql" />
+    <Build Include="Views\dbo.View1.sql" />
   </ItemGroup>
 </Project>
