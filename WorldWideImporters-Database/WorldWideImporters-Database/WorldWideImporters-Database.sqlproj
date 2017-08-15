@@ -68,6 +68,7 @@
     <Folder Include="Stored Procedures\" />
     <Folder Include="User Defined Types\" />
     <Folder Include="Sequences\" />
+    <Folder Include="dbbackup" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Warehouse.Colors.sql" />
@@ -222,5 +223,8 @@
     <Build Include="Sequences\Sequences.TransactionTypeID.sql" />
     <Build Include="Security\Application.FilterCustomersBySalesTerritoryRole.sql" />
     <Build Include="Views\dbo.View1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbbackup\txt.bak" />
   </ItemGroup>
 </Project>
