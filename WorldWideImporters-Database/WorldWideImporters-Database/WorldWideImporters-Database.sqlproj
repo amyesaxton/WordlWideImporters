@@ -223,8 +223,10 @@
     <Build Include="Sequences\Sequences.TransactionTypeID.sql" />
     <Build Include="Security\Application.FilterCustomersBySalesTerritoryRole.sql" />
     <Build Include="Views\dbo.View1.sql" />
+    <Build Include="Views\dbo.View2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbbackup\txt.bak" />
+    <None Include="WorldWideImporters-Database.publish.xml" />
   </ItemGroup>
 </Project>
